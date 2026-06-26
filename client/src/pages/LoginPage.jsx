@@ -182,7 +182,7 @@ export default function LoginPage() {
           </div>
 
           <a
-            href={`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/google`}
+            href={`${import.meta.env.VITE_API_URL || 'http://localhost:5050/api'}/auth/google`}
             className="mt-6 btn-ghost w-full flex items-center justify-center gap-3"
             id="google-login"
           >

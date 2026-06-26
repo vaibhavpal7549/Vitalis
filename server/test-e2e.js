@@ -6,7 +6,7 @@
 const http = require('http');
 const https = require('https');
 
-const BASE = 'http://localhost:5000/api';
+const BASE = 'http://localhost:5050/api';
 let demoToken = '';
 let demoRefreshToken = '';
 let adminToken = '';

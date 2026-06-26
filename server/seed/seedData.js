@@ -30,13 +30,10 @@ async function seed() {
     console.log('Cleared existing data.');
 
     // Create demo user
-    const salt = await bcrypt.genSalt(12);
-    const hashedPassword = await bcrypt.hash('demo123456', salt);
-
     const demoUser = await User.create({
       name: 'Alex Johnson',
       email: 'demo@vitalis.ai',
-      password: hashedPassword,
+      password: 'demo123456',
       role: 'user',
       profile: {
         age: 28,
@@ -50,11 +47,10 @@ async function seed() {
     });
 
     // Create admin user
-    const adminPassword = await bcrypt.hash('admin123456', salt);
     await User.create({
       name: 'Admin',
       email: 'admin@vitalis.ai',
-      password: adminPassword,
+      password: 'admin123456',
       role: 'admin',
       profile: { age: 30, gender: 'male', height: 180, activityLevel: 'active' },
       streak: { current: 0, longest: 0 },
